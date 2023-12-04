@@ -4,7 +4,7 @@ use std::str::Split;
 use regex::Regex;
 
 #[derive(Debug, Eq, PartialEq)]
-struct Game {
+pub struct Game {
     id: i32,
     sets: Vec<Cubes>,
 }
