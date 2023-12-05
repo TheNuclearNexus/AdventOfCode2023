@@ -1,6 +1,3 @@
-use std::str::Split;
-use regex::Regex;
-
 fn calculate_number(line: &String) -> i32 {
     let first = line.chars()
         .find(|c| c.is_ascii_digit())
@@ -114,7 +111,7 @@ pub fn part2(input: &str) -> i32 {
 
 #[cfg(test)]
 mod tests {
-    use super::{day1_part1_chars, part1, part2};
+    use super::part2;
 
     #[test]
     fn sample1() {

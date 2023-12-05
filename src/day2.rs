@@ -1,7 +1,5 @@
 use std::cmp::max;
 use std::error::Error;
-use std::str::Split;
-use regex::Regex;
 
 #[derive(Debug, Eq, PartialEq)]
 pub struct Game {
@@ -30,7 +28,7 @@ pub fn part1_generator(input: &str) -> Result<Vec<Game>, Box<dyn Error>> {
         let colon = line.find(|c| c == ':').expect("No colon");
         let id = line[5..colon].parse::<i32>().expect("Invalid number");
 
-        let mut sets: Vec<Cubes> = line[colon + 2..line.len()]
+        let sets: Vec<Cubes> = line[colon + 2..line.len()]
             .split("; ")
             .map(
                 |set| {

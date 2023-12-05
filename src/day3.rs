@@ -73,8 +73,8 @@ pub fn get_number(i: usize, j: usize, lines: &Vec<Vec<char>>) -> Option<u32> {
         }
     }
     for k in j..lines[i].len() {
-        let c = lines[i][k];
-        if !lines[i][k].is_numeric() {
+        let c: char = lines[i][k];
+        if !c.is_numeric() {
             break;
         }
         end = k;
@@ -132,8 +132,3 @@ pub fn part2(input: &str) -> i32 {
     sum as i32
 }
 
-#[cfg(test)]
-mod tests {
-    use super::{part1, part2};
-
-}
