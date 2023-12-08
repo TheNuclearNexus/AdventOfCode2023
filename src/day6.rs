@@ -67,14 +67,13 @@ pub fn part2(input: &str) -> i32 {
     let d2 = f64::ceil((-b - root) / -2_f64);
 
     let total = f64::floor(d2 - d1);
-    println!("{total}");
 
     total as i32
 }
 
 #[cfg(test)]
 mod tests {
-    use super::{part2};
+    use super::part2;
 
     #[test]
     pub fn test() {

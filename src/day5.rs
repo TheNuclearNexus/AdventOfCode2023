@@ -215,7 +215,6 @@ pub fn part2(input: &Data) -> i32 {
         })
     }
 
-    println!("{:?}", seeds);
     for i in 0..input.maps.len() {
         seeds = partition(seeds, &input.maps[i]);
     }
